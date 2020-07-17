@@ -1,6 +1,5 @@
 import time
 import pandas as pd
-import numpy as np
 
 # Dictionary that contains data for the three cities: Chicago, New York City, Washington
 CITY_DATA = { 'chicago': 'chicago.csv',
