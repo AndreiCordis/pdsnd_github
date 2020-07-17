@@ -1,8 +1,8 @@
 ### 17.07.2020
-Include the date you created this project and README file.
+
 
 ### Project: Explore US Bikeshare Data
-Replace the Project Title
+
 
 ### Description
 
