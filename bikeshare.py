@@ -165,7 +165,7 @@ def trip_duration_stats(df):
     # Converts the total travel time from seconds to seconds, minutes and hours
     m, s = divmod(total_travel_time, 60)
     h, m = divmod(m, 60)
-    print("The total travel time is {} h, {} min, {} s.".format(h,m,s))
+    print("\nThe total travel time is {} h, {} min, {} s.\n".format(h,m,s))
 
     # Calculates the travel times' mean and converts it into an int
     mean_travel_time = int(round(df['Trip Duration'].mean()))
@@ -174,9 +174,9 @@ def trip_duration_stats(df):
     # Using conditional statements to make the output more user friendly
     if mins > 60:
         hrs, mins = divmod(mins, 60)
-        print("The average travel time is {} h, {} min, {} s.".format(hrs, mins, sec))
+        print("\nThe average travel time is {} h, {} min, {} s.\n".format(hrs, mins, sec))
     else:
-        print("The average travel time is {} min, {} s.".format(mins, sec))
+        print("\nThe average travel time is {} min, {} s.\n".format(mins, sec))
 
     # This will display the amount of time elapsed while doing these computations
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -201,7 +201,7 @@ def user_stats(df):
     # This will display counts of user gender (M/F)
         print("\nThe number gender counts are: \n{}\n".format(user_gender_counts.to_string()))
     except:
-        print("Sorry, there is no data about the users' gender based on your filters.")
+        print("\nSorry, there is no data about the users' gender based on your filters.\n")
 
     try:
     # The year data was outputed as float so I decided to convert it into int
@@ -213,7 +213,7 @@ def user_stats(df):
         print("\nThe most common birth year is: {}\n".format(most_common_birth_year))
     # Getting errors because the lack of data when the user selected some filters so I decided to use a exception block
     except:
-        print("Sorry, there is no data about the birth year based on your filters.")
+        print("\nSorry, there is no data about the birth year based on your filters.\n")
 
     # This will display the amount of time elapsed while doing these computations
     print("\nThis took %s seconds." % (time.time() - start_time))
